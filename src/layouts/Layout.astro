@@ -157,36 +157,40 @@ const isServicePage = services.some(s => isActive(s.href));
       <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7" /></svg>
     </button>
 
-    <footer class="bg-bv-navy text-white">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <div>
-            <h3 class="text-lg font-bold mb-4">Bureau Veritas AVOH</h3>
-            <p class="text-sm text-white/80 leading-relaxed">Acoustics, Vibration & Occupational Hygiene specialists. Trusted, independent consultancy services across the UK and worldwide.</p>
-            <p class="text-sm text-white/80 mt-3">Tel: 0345 600 1828</p>
-          </div>
-          <div>
-            <h3 class="text-lg font-bold mb-4">Our Services</h3>
-            <ul class="space-y-2 text-sm">
-              {services.map((s) => (
-                <li><a href={`${base}${s.href}`} class="text-white/80 hover:text-bv-teal focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-bv-teal transition-colors">{s.label}</a></li>
-              ))}
-            </ul>
-          </div>
-          <div>
-            <h3 class="text-lg font-bold mb-4">UK Offices</h3>
-            <ul class="space-y-2 text-sm text-white/80">
-              <li>Glasgow</li>
-              <li>Aberdeen</li>
-              <li>Manchester</li>
-              <li>London</li>
-            </ul>
-            <div class="mt-4">
-              <a href={`${base}contact`} class="text-bv-teal hover:text-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-bv-teal transition-colors text-sm font-semibold">Get in touch &rarr;</a>
+    <footer class="text-white">
+      <div class="bg-[#1a1fbd]">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div>
+              <h3 class="text-lg font-bold mb-4">Bureau Veritas AVOH</h3>
+              <p class="text-sm text-white/80 leading-relaxed">Acoustics, Vibration & Occupational Hygiene specialists. Trusted, independent consultancy services across the UK and worldwide.</p>
+              <p class="text-sm text-white/80 mt-3">Tel: 0345 600 1828</p>
+            </div>
+            <div>
+              <h3 class="text-lg font-bold mb-4">Our Services</h3>
+              <ul class="space-y-2 text-sm">
+                {services.map((s) => (
+                  <li><a href={`${base}${s.href}`} class="text-white/80 hover:text-bv-teal focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-bv-teal transition-colors">{s.label}</a></li>
+                ))}
+              </ul>
+            </div>
+            <div>
+              <h3 class="text-lg font-bold mb-4">UK Offices</h3>
+              <ul class="space-y-2 text-sm text-white/80">
+                <li>Glasgow</li>
+                <li>Aberdeen</li>
+                <li>Manchester</li>
+                <li>London</li>
+              </ul>
+              <div class="mt-4">
+                <a href={`${base}contact`} class="text-bv-teal hover:text-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-bv-teal transition-colors text-sm font-semibold">Get in touch &rarr;</a>
+              </div>
             </div>
           </div>
         </div>
-        <div class="border-t border-white/10 mt-8 pt-8 text-center text-xs text-white/50">
+      </div>
+      <div class="bg-bv-navy">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 text-center text-xs text-white/50">
           &copy; {new Date().getFullYear()} Bureau Veritas UK Ltd. All rights reserved.
         </div>
       </div>
