@@ -1,0 +1,122 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Hero from '../components/Hero.astro';
+import ContactSection from '../components/ContactSection.astro';
+---
+
+<Layout
+  title="AIV & FIV Screening Studies — Bureau Veritas AVOH"
+  description="Acoustic Induced Vibration (AIV) and Flow Induced Vibration (FIV) screening studies to prevent fatigue induced failures in process pipework."
+>
+  <Hero
+    title="AIV & FIV"
+    subtitle="Acoustic Induced Vibration and Flow Induced Vibration screening studies — preventing fatigue induced failures in process pipework."
+    image="oil-gas.jpg"
+    imageAlt="Oil and gas facility"
+  />
+
+  <article class="py-16">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section class="mb-12">
+        <p class="text-lg text-gray-700 leading-relaxed mb-6">
+          AIV and FIV are major causes of fatigue induced failure in process pipework. Bureau Veritas is a co-author of the Energy Institute's "Guidelines for the Avoidance of Fatigue Induced Failure in Process Pipework" (2008), the industry reference document for assessing and addressing pipework vibration concerns.
+        </p>
+      </section>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+        <section class="bg-white rounded-xl p-6 shadow-sm border border-gray-100">
+          <h2 class="text-xl font-bold text-bv-navy mb-4">Acoustic Induced Vibration (AIV)</h2>
+          <p class="text-gray-600 text-sm leading-relaxed mb-4">
+            AIV is high-frequency noise caused by flow passing through relief valves, blowdown valves and other restriction orifices that can result in vibration induced acoustic fatigue failure.
+          </p>
+          <h3 class="font-semibold text-bv-navy mb-2">AIV Screening Process</h3>
+          <ol class="space-y-2 text-sm text-gray-700">
+            <li class="flex items-start gap-2">
+              <span class="font-bold text-bv-teal">1.</span>
+              <span>Identification of valves at risk and Sound Power Level (SWL) calculation</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="font-bold text-bv-teal">2.</span>
+              <span>Where SWL is elevated, assessment of welded connections and Likelihood of Failure (LOF) scoring</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="font-bold text-bv-teal">3.</span>
+              <span>Recommendations to reduce LOF and risk of acoustic failure to acceptable levels</span>
+            </li>
+          </ol>
+        </section>
+
+        <section class="bg-white rounded-xl p-6 shadow-sm border border-gray-100">
+          <h2 class="text-xl font-bold text-bv-navy mb-4">Flow Induced Vibration (FIV)</h2>
+          <p class="text-gray-600 text-sm leading-relaxed mb-4">
+            FIV is caused by high flow within pipework and connected leg branches in gas systems, leading to potential fatigue failures.
+          </p>
+          <h3 class="font-semibold text-bv-navy mb-2">FIV Screening Process</h3>
+          <ol class="space-y-2 text-sm text-gray-700">
+            <li class="flex items-start gap-2">
+              <span class="font-bold text-bv-teal">1.</span>
+              <span>Critical line identification and calculation of kinetic energy (&rho;v&sup2;)</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="font-bold text-bv-teal">2.</span>
+              <span>For high kinetic energy lines, detailed assessment including LOF scoring</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="font-bold text-bv-teal">3.</span>
+              <span>Recommendations including noise trims, modifications and additional supports</span>
+            </li>
+          </ol>
+        </section>
+      </div>
+
+      <section class="mb-12">
+        <h2 class="text-2xl font-bold text-bv-navy mb-6">Applications</h2>
+        <p class="text-gray-600 leading-relaxed mb-4">
+          AIV-FIV screening studies apply to a variety of assets:
+        </p>
+        <ul class="space-y-3">
+          {[
+            'New plants (FEED and EPC stage)',
+            'Expansions or modifications of existing plants',
+            'Onshore plants, offshore platforms and refineries',
+          ].map((item) => (
+            <li class="flex items-start gap-3">
+              <svg class="w-5 h-5 text-bv-teal flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>
+              <span class="text-gray-700">{item}</span>
+            </li>
+          ))}
+        </ul>
+      </section>
+
+      <section class="mb-12">
+        <h2 class="text-2xl font-bold text-bv-navy mb-6">Additional Capabilities</h2>
+        <p class="text-gray-600 leading-relaxed mb-4">
+          When more complex solutions are required, we can perform computer simulations to determine the effectiveness of additional supports. FEA studies can be carried out to determine stress levels as per ASME 31.3, and we can perform on-site measurements to verify vibration and stress levels.
+        </p>
+        <ul class="space-y-3">
+          {[
+            'Vibration Risk Assessments',
+            'Vibration and stress measurements',
+            'Operational Deflection Shape and Experimental Modal Analysis',
+            'Fatigue life calculations',
+            'Computer simulation and FEA',
+          ].map((item) => (
+            <li class="flex items-start gap-3">
+              <svg class="w-5 h-5 text-bv-teal flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>
+              <span class="text-gray-700">{item}</span>
+            </li>
+          ))}
+        </ul>
+      </section>
+
+      <section class="bg-bv-navy/5 rounded-xl p-8">
+        <h2 class="text-xl font-bold text-bv-navy mb-4">Why Choose Bureau Veritas?</h2>
+        <p class="text-gray-600 leading-relaxed">
+          As a co-author of the Energy Institute's guidelines, Bureau Veritas has undertaken AIV-FIV studies for clients in the UK and worldwide, including Saudi Arabia and Abu Dhabi. We can perform all aspects of pipework vibration assessment and troubleshooting.
+        </p>
+      </section>
+    </div>
+  </article>
+
+  <ContactSection />
+</Layout>

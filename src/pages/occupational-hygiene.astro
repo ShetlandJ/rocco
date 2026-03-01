@@ -1,0 +1,94 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Hero from '../components/Hero.astro';
+import ContactSection from '../components/ContactSection.astro';
+---
+
+<Layout
+  title="Occupational Hygiene Services — Bureau Veritas AVOH"
+  description="COSHH risk assessments, LEV testing, indoor air quality, EMF assessments, radon, pharmaceutical OEL testing, cleanroom testing and workplace exposure monitoring."
+>
+  <Hero
+    title="Occupational Hygiene"
+    subtitle="High-quality occupational hygiene and workplace health and safety services to safeguard employee wellbeing and maintain regulatory compliance."
+    image="ppe.jpg"
+    imageAlt="Personal protective equipment"
+  />
+
+  <article class="py-16">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section class="mb-12">
+        <p class="text-lg text-gray-700 leading-relaxed mb-6">
+          Occupational hygiene relates to anticipating, recognising, evaluating and controlling workplace hazards from physical, chemical or biological agents. Our objective is to allow your business to operate effectively while protecting health and achieving compliance.
+        </p>
+        <p class="text-gray-600 leading-relaxed">
+          Our experienced team of professional, registered occupational hygiene consultants work to the latest guidelines and statutory requirements to support your specific requirements.
+        </p>
+      </section>
+
+      <section class="mb-12">
+        <h2 class="text-2xl font-bold text-bv-navy mb-6">Our Services</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+          {[
+            'Occupational health/hygiene risk audits',
+            'COSHH risk assessments',
+            'Workplace exposure assessments',
+            'Local exhaust ventilation (LEV) testing',
+            'Noise at Work (NAW) assessments',
+            'Hand-arm vibration (HAV) assessments',
+            'Whole-body vibration (WBV) assessments',
+            'Ionising radiation (including radon) assessments',
+            'Non-ionising radiation assessments',
+            'Electromagnetic field (EMF) assessments',
+            'Lighting assessments',
+            'Pharmaceutical OEL testing',
+            'Cleanroom and clean air device testing',
+            'Breathing air (compressed air) quality assessments',
+            'Indoor air quality (IAQ) assessments',
+          ].map((item) => (
+            <div class="flex items-start gap-3">
+              <svg class="w-5 h-5 text-bv-teal flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>
+              <span class="text-gray-700 text-sm">{item}</span>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <section class="mb-12">
+        <h2 class="text-2xl font-bold text-bv-navy mb-6">Reporting & Controls</h2>
+        <p class="text-gray-600 leading-relaxed mb-4">
+          Reports are concise with an easy-to-understand executive summary supported by relevant technical data, observations and analysis. They contain advice on worker protection including work practice changes, engineering controls and personal protective equipment.
+        </p>
+        <p class="text-gray-600 leading-relaxed">
+          Once workplace risks are determined and quantified, we assist with informing, instructing and training staff in workplace hazards and control mechanisms. Our hygienists develop and deliver training and toolbox talks tailored to client requirements.
+        </p>
+      </section>
+
+      <section class="mb-12">
+        <h2 class="text-2xl font-bold text-bv-navy mb-4">Benefits</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          {[
+            'Achieve and maintain compliance with all relevant regulations',
+            'Demonstrate your commitment to employee health and safety',
+            'Peace of mind from a trusted, independent compliance partner',
+            'Access to a full range of testing, inspection and certification services',
+          ].map((benefit) => (
+            <div class="flex items-start gap-2">
+              <svg class="w-4 h-4 text-bv-accent flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" /></svg>
+              <span class="text-sm text-gray-700">{benefit}</span>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <section class="bg-bv-navy/5 rounded-xl p-8">
+        <h2 class="text-xl font-bold text-bv-navy mb-4">Why Choose Bureau Veritas?</h2>
+        <p class="text-gray-600 leading-relaxed">
+          Bureau Veritas works with employers of all sizes to help achieve and maintain compliance with relevant health and safety regulations while safeguarding employee health and wellbeing. Our diverse resources can be called upon for specialist control measures across chemical, physical and other risks.
+        </p>
+      </section>
+    </div>
+  </article>
+
+  <ContactSection />
+</Layout>

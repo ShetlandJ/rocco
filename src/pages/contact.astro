@@ -1,0 +1,86 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout
+  title="Contact Us — Bureau Veritas AVOH"
+  description="Get in touch with Bureau Veritas Acoustics, Vibration & Occupational Hygiene team. Offices in Glasgow, Aberdeen, Manchester and London."
+>
+  <section class="bg-bv-navy text-white py-16 sm:py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h1 class="text-3xl sm:text-4xl font-bold mb-4">Contact Us</h1>
+      <p class="text-lg text-white/70 max-w-2xl">Get in touch with our Acoustics, Vibration & Occupational Hygiene team to discuss your requirements.</p>
+    </div>
+  </section>
+
+  <section class="py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+        <!-- Contact Info -->
+        <div>
+          <h2 class="text-2xl font-bold text-bv-navy mb-6">Get in Touch</h2>
+          <div class="mb-6">
+            <h3 class="font-semibold text-bv-navy mb-2">Email</h3>
+            <p id="contact-email" class="text-gray-600"></p>
+          </div>
+          <div class="mb-6">
+            <h3 class="font-semibold text-bv-navy mb-2">Phone</h3>
+            <p class="text-gray-600">0345 600 1828</p>
+          </div>
+          <div>
+            <h3 class="font-semibold text-bv-navy mb-2">Website</h3>
+            <a href="https://www.bureauveritas.co.uk" class="text-bv-teal hover:underline" target="_blank" rel="noopener">www.bureauveritas.co.uk</a>
+          </div>
+        </div>
+
+        <!-- Offices -->
+        <div>
+          <h2 class="text-2xl font-bold text-bv-navy mb-6">Our UK Offices</h2>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+            {[
+              { city: 'Glasgow', detail: 'Training centre & main Scottish office' },
+              { city: 'Aberdeen', detail: 'Oil & gas sector hub' },
+              { city: 'Manchester', detail: 'Northern England office' },
+              { city: 'London', detail: 'Southern England office' },
+            ].map((office) => (
+              <div class="bg-gray-50 rounded-lg p-6 border border-gray-100">
+                <div class="flex items-start gap-3">
+                  <svg class="w-5 h-5 text-bv-teal flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" /><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" /></svg>
+                  <div>
+                    <h3 class="font-bold text-bv-navy">{office.city}</h3>
+                    <p class="text-sm text-gray-500">{office.detail}</p>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-16 bg-gray-50">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="text-2xl font-bold text-bv-navy mb-4">Ready to Discuss Your Project?</h2>
+      <p class="text-gray-600 mb-6">Whether you need a noise impact assessment, pipework vibration analysis, occupational hygiene audit or any of our other services, our team is ready to help.</p>
+      <p id="cta-email" class="text-lg"></p>
+    </div>
+  </section>
+</Layout>
+
+<script>
+  function renderEmail(elId: string, asLink: boolean) {
+    const el = document.getElementById(elId);
+    if (!el) return;
+    const u = 'rocco.giudice';
+    const d = 'bureauveritas.com';
+    const addr = `${u}@${d}`;
+    if (asLink) {
+      el.innerHTML = `<a href="mai${''}lto:${addr}" class="text-bv-teal hover:underline text-lg font-semibold">${addr}</a>`;
+    } else {
+      el.innerHTML = `<a href="mai${''}lto:${addr}" class="text-bv-teal hover:underline">${addr}</a>`;
+    }
+  }
+  renderEmail('contact-email', false);
+  renderEmail('cta-email', true);
+</script>

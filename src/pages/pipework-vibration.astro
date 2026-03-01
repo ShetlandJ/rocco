@@ -1,0 +1,66 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Hero from '../components/Hero.astro';
+import ContactSection from '../components/ContactSection.astro';
+---
+
+<Layout
+  title="Pipework Vibration Assessment — Bureau Veritas AVOH"
+  description="Pipework vibration risk assessments, PSI screening, dynamic strain measurements, FEA simulation and vibration troubleshooting for onshore and offshore facilities."
+>
+  <Hero
+    title="Pipework Vibration"
+    subtitle="Bespoke solutions to help prevent, assess and manage risks associated with vibration induced fatigue failures in process pipework."
+    image="pipework.jpg"
+    imageAlt="Pipework for vibration assessment"
+  />
+
+  <article class="py-16">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section class="mb-12">
+        <p class="text-lg text-gray-700 leading-relaxed mb-6">
+          In some situations a detailed investigation and assessment is required to determine why a piping failure has occurred and what can be done to prevent it from re-occurring. An investigation to avoid a piping failure can help save money and avoid downtime.
+        </p>
+        <p class="text-gray-600 leading-relaxed">
+          Bureau Veritas were involved in the development and update of the Energy Institute "Guidelines for the Avoidance of Fatigue Induced Failure in Process Pipework" (2008) and have significant experience in carrying out surveys based on this and other risk-based assessment techniques.
+        </p>
+      </section>
+
+      <section class="mb-12">
+        <h2 class="text-2xl font-bold text-bv-navy mb-6">Our Services</h2>
+        <ul class="space-y-3">
+          {[
+            'Full scale or area-focused Vibration Risk Assessments (VRAs) using PSI pre-screening, vibration and dynamic stress measurements',
+            'Dynamic strain measurements on main lines and Small Bore Connections (SBCs)',
+            'Multi-channel Operational Deflection Shape (ODS) and modal analysis',
+            'Design and review of supports and clamps for vibration mitigation',
+            'PSI (Process Screening Integrity) pre-screening — desk-based assessment for both existing and FEED stage plants',
+            'Pipework vibration awareness training for site personnel',
+            'FEA simulation for structures affected by vibration',
+          ].map((item) => (
+            <li class="flex items-start gap-3">
+              <svg class="w-5 h-5 text-bv-teal flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>
+              <span class="text-gray-700">{item}</span>
+            </li>
+          ))}
+        </ul>
+      </section>
+
+      <section class="mb-12">
+        <h2 class="text-2xl font-bold text-bv-navy mb-6">PSI Pre-Screening</h2>
+        <p class="text-gray-600 leading-relaxed">
+          The Process Screening Integrity (PSI) predictive technique is suitable for both new facilities (even at FEED stages) and those already in production. For new facilities, PSI can identify pipework at risk in the design phase so appropriate modifications can be made before operation. For operational facilities, the results of a formal study, supported by field measurements, can show how to reduce or eliminate potential fatigue failures.
+        </p>
+      </section>
+
+      <section class="bg-bv-navy/5 rounded-xl p-8">
+        <h2 class="text-xl font-bold text-bv-navy mb-4">Why Choose Bureau Veritas?</h2>
+        <p class="text-gray-600 leading-relaxed">
+          All our services are tailored to clients' needs with ad hoc solutions developed to meet their requirements. We aim to help clients achieve best practice and reduce downtime and safety issues, with the impartiality that has made Bureau Veritas a world leader.
+        </p>
+      </section>
+    </div>
+  </article>
+
+  <ContactSection />
+</Layout>

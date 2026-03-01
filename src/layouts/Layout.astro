@@ -1,0 +1,133 @@
+---
+interface Props {
+  title: string;
+  description?: string;
+  ogImage?: string;
+}
+
+const { title, description = "Bureau Veritas Acoustics, Vibration & Occupational Hygiene — specialist consultancy services across the UK.", ogImage } = Astro.props;
+const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+const base = import.meta.env.BASE_URL;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content={description} />
+    <title>{title}</title>
+    <link rel="canonical" href={canonicalURL} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={canonicalURL} />
+    {ogImage && <meta property="og:image" content={ogImage} />}
+  </head>
+  <body class="font-sans text-bv-dark bg-white">
+    <header class="bg-bv-navy text-white sticky top-0 z-50">
+      <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between h-16">
+          <a href={`${base}`} class="text-lg font-bold tracking-tight hover:text-bv-teal transition-colors">
+            Bureau Veritas <span class="hidden sm:inline">— AVOH</span>
+          </a>
+          <button
+            id="mobile-menu-btn"
+            class="lg:hidden p-2 rounded-md hover:bg-bv-accent/20"
+            aria-label="Toggle menu"
+          >
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+          </button>
+          <div class="hidden lg:flex items-center gap-1">
+            <a href={`${base}`} class="px-3 py-2 text-sm hover:text-bv-teal transition-colors">Home</a>
+            <div class="relative group">
+              <button class="px-3 py-2 text-sm hover:text-bv-teal transition-colors flex items-center gap-1">
+                Services
+                <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+              </button>
+              <div class="absolute left-0 top-full pt-1 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+                <div class="bg-white text-bv-dark rounded-lg shadow-xl border border-gray-100 py-2 w-72">
+                  <a href={`${base}environmental-noise`} class="block px-4 py-2 text-sm hover:bg-bv-navy/5 hover:text-bv-navy">Environmental Noise</a>
+                  <a href={`${base}occupational-noise`} class="block px-4 py-2 text-sm hover:bg-bv-navy/5 hover:text-bv-navy">Occupational Noise</a>
+                  <a href={`${base}pipework-vibration`} class="block px-4 py-2 text-sm hover:bg-bv-navy/5 hover:text-bv-navy">Pipework Vibration</a>
+                  <a href={`${base}aiv-fiv`} class="block px-4 py-2 text-sm hover:bg-bv-navy/5 hover:text-bv-navy">AIV & FIV</a>
+                  <a href={`${base}hand-arm-whole-body-vibration`} class="block px-4 py-2 text-sm hover:bg-bv-navy/5 hover:text-bv-navy">Hand-Arm & Whole-Body Vibration</a>
+                  <a href={`${base}building-acoustics`} class="block px-4 py-2 text-sm hover:bg-bv-navy/5 hover:text-bv-navy">Building Acoustics</a>
+                  <a href={`${base}occupational-hygiene`} class="block px-4 py-2 text-sm hover:bg-bv-navy/5 hover:text-bv-navy">Occupational Hygiene</a>
+                  <a href={`${base}training`} class="block px-4 py-2 text-sm hover:bg-bv-navy/5 hover:text-bv-navy">Training</a>
+                </div>
+              </div>
+            </div>
+            <a href={`${base}contact`} class="ml-2 px-4 py-2 text-sm bg-bv-teal text-white rounded-md hover:bg-bv-teal/90 transition-colors">Contact Us</a>
+          </div>
+        </div>
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="lg:hidden hidden pb-4">
+          <a href={`${base}`} class="block px-3 py-2 text-sm hover:text-bv-teal">Home</a>
+          <div class="border-t border-white/10 my-2"></div>
+          <p class="px-3 py-1 text-xs uppercase tracking-wider text-white/50">Services</p>
+          <a href={`${base}environmental-noise`} class="block px-3 py-2 text-sm hover:text-bv-teal">Environmental Noise</a>
+          <a href={`${base}occupational-noise`} class="block px-3 py-2 text-sm hover:text-bv-teal">Occupational Noise</a>
+          <a href={`${base}pipework-vibration`} class="block px-3 py-2 text-sm hover:text-bv-teal">Pipework Vibration</a>
+          <a href={`${base}aiv-fiv`} class="block px-3 py-2 text-sm hover:text-bv-teal">AIV & FIV</a>
+          <a href={`${base}hand-arm-whole-body-vibration`} class="block px-3 py-2 text-sm hover:text-bv-teal">Hand-Arm & Whole-Body Vibration</a>
+          <a href={`${base}building-acoustics`} class="block px-3 py-2 text-sm hover:text-bv-teal">Building Acoustics</a>
+          <a href={`${base}occupational-hygiene`} class="block px-3 py-2 text-sm hover:text-bv-teal">Occupational Hygiene</a>
+          <a href={`${base}training`} class="block px-3 py-2 text-sm hover:text-bv-teal">Training</a>
+          <div class="border-t border-white/10 my-2"></div>
+          <a href={`${base}contact`} class="block px-3 py-2 text-sm text-bv-teal font-semibold">Contact Us</a>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <slot />
+    </main>
+
+    <footer class="bg-bv-navy text-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div>
+            <h3 class="text-lg font-bold mb-4">Bureau Veritas AVOH</h3>
+            <p class="text-sm text-white/70 leading-relaxed">Acoustics, Vibration & Occupational Hygiene specialists. Trusted, independent consultancy services across the UK and worldwide.</p>
+          </div>
+          <div>
+            <h3 class="text-lg font-bold mb-4">Our Services</h3>
+            <ul class="space-y-2 text-sm text-white/70">
+              <li><a href={`${base}environmental-noise`} class="hover:text-bv-teal transition-colors">Environmental Noise</a></li>
+              <li><a href={`${base}occupational-noise`} class="hover:text-bv-teal transition-colors">Occupational Noise</a></li>
+              <li><a href={`${base}pipework-vibration`} class="hover:text-bv-teal transition-colors">Pipework Vibration</a></li>
+              <li><a href={`${base}aiv-fiv`} class="hover:text-bv-teal transition-colors">AIV & FIV</a></li>
+              <li><a href={`${base}building-acoustics`} class="hover:text-bv-teal transition-colors">Building Acoustics</a></li>
+              <li><a href={`${base}occupational-hygiene`} class="hover:text-bv-teal transition-colors">Occupational Hygiene</a></li>
+              <li><a href={`${base}training`} class="hover:text-bv-teal transition-colors">Training</a></li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="text-lg font-bold mb-4">UK Offices</h3>
+            <ul class="space-y-2 text-sm text-white/70">
+              <li>Glasgow</li>
+              <li>Aberdeen</li>
+              <li>Manchester</li>
+              <li>London</li>
+            </ul>
+            <div class="mt-4">
+              <a href={`${base}contact`} class="text-bv-teal hover:text-white transition-colors text-sm font-semibold">Get in touch &rarr;</a>
+            </div>
+          </div>
+        </div>
+        <div class="border-t border-white/10 mt-8 pt-8 text-center text-xs text-white/40">
+          &copy; {new Date().getFullYear()} Bureau Veritas UK Ltd. All rights reserved.
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      document.getElementById('mobile-menu-btn')?.addEventListener('click', () => {
+        document.getElementById('mobile-menu')?.classList.toggle('hidden');
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,140 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Hero from '../components/Hero.astro';
+import ContactSection from '../components/ContactSection.astro';
+
+const base = import.meta.env.BASE_URL;
+---
+
+<Layout
+  title="Noise & Vibration Training Courses — Bureau Veritas AVOH"
+  description="Noise at Work competency training, HAVS training, NEMS training and pipework vibration awareness courses delivered by experienced practitioners."
+>
+  <Hero
+    title="Training"
+    subtitle="Noise and vibration training courses run by experienced and current practitioners, covering workplace noise competency, HAVS management and pipework vibration awareness."
+    image="noise-map-factory.jpg"
+    imageAlt="Noise mapping for training"
+  />
+
+  <article class="py-16">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section class="mb-12">
+        <p class="text-lg text-gray-700 leading-relaxed">
+          Bureau Veritas offer a range of noise and vibration training courses run by experienced practitioners. Occupational noise and vibration courses are usually run from our training centre in Glasgow, with alternative arrangements available. Pipework Vibration Awareness courses are usually held at the client's premises.
+        </p>
+      </section>
+
+      <!-- Noise at Work -->
+      <section class="mb-12 bg-white rounded-xl p-6 sm:p-8 shadow-sm border border-gray-100">
+        <h2 class="text-xl font-bold text-bv-navy mb-4">Noise at Work Competency Training</h2>
+        <p class="text-sm text-bv-teal font-semibold mb-4">3-day course (classroom + practical)</p>
+        <p class="text-gray-600 leading-relaxed mb-4">
+          Covers the fundamentals of acoustics and sound through to the requirements and implementation of the Control of Noise at Work Regulations (CoNAWR). Includes a half-day practical session at industrial facilities.
+        </p>
+        <h3 class="font-semibold text-bv-navy mb-2">Modules include:</h3>
+        <ul class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm text-gray-700">
+          {[
+            'The basics of sound',
+            'Mechanisms of hearing and hearing loss',
+            'Definition of sound level and decibel calculations',
+            'Noise exposure and its calculation',
+            'Noise measurement and sound level meters',
+            'Requirements of CoNAWR',
+            'Hearing protection',
+            'Practical operation of a dosemeter',
+          ].map((item) => (
+            <li class="flex items-start gap-2">
+              <svg class="w-4 h-4 text-bv-teal flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>
+              <span>{item}</span>
+            </li>
+          ))}
+        </ul>
+      </section>
+
+      <!-- NEMS Training -->
+      <section class="mb-12 bg-white rounded-xl p-6 sm:p-8 shadow-sm border border-gray-100">
+        <h2 class="text-xl font-bold text-bv-navy mb-4">NEMS Training</h2>
+        <p class="text-sm text-bv-teal font-semibold mb-4">1-day add-on course</p>
+        <p class="text-gray-600 leading-relaxed mb-4">
+          An additional one-day course that can be added to the Noise at Work training to gain competency in the use of Bureau Veritas' Noise Exposure Management System (NEMS).
+        </p>
+        <ul class="space-y-2 text-sm text-gray-700">
+          {[
+            'Introduction to NEMS',
+            'Practical use of NEMS',
+            'Using NEMS to determine overall effect on noise levels and exposure',
+            'Use of Area Leq and dosimetry data with the NEMS system',
+          ].map((item) => (
+            <li class="flex items-start gap-2">
+              <svg class="w-4 h-4 text-bv-teal flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>
+              <span>{item}</span>
+            </li>
+          ))}
+        </ul>
+      </section>
+
+      <!-- HAVS Training -->
+      <section class="mb-12 bg-white rounded-xl p-6 sm:p-8 shadow-sm border border-gray-100">
+        <h2 class="text-xl font-bold text-bv-navy mb-4">HAVS Training</h2>
+        <p class="text-sm text-bv-teal font-semibold mb-4">1-day course</p>
+        <p class="text-gray-600 leading-relaxed mb-4">
+          Covers practical HAVS management through to the requirements of the Control of Vibration at Work Regulations (CoVAWR).
+        </p>
+        <h3 class="font-semibold text-bv-navy mb-2">Course content:</h3>
+        <ul class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm text-gray-700">
+          {[
+            'Introduction to HAVS',
+            'Hand-arm vibration risks',
+            'Legislation relating to HAVS and CoVAWR',
+            'Vibration theory and vibration levels',
+            'Vibration meters and their use',
+            'Vibration exposure calculation',
+            'HAVS risk management',
+            'On-site management programme operation',
+          ].map((item) => (
+            <li class="flex items-start gap-2">
+              <svg class="w-4 h-4 text-bv-teal flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>
+              <span>{item}</span>
+            </li>
+          ))}
+        </ul>
+      </section>
+
+      <!-- Pipework Vibration Awareness -->
+      <section class="mb-12 bg-white rounded-xl p-6 sm:p-8 shadow-sm border border-gray-100">
+        <h2 class="text-xl font-bold text-bv-navy mb-4">Pipework Vibration Awareness Training</h2>
+        <p class="text-sm text-bv-teal font-semibold mb-4">Half-day course (at client premises)</p>
+        <p class="text-gray-600 leading-relaxed mb-4">
+          Aimed at integrity and maintenance engineers, this training develops awareness of pipework vibration hazards with particular attention to Small Bore Connections (SBCs). Tailored to the specific site using real examples of good and bad practice.
+        </p>
+        <h3 class="font-semibold text-bv-navy mb-2">Topics covered:</h3>
+        <ul class="space-y-2 text-sm text-gray-700">
+          {[
+            'Vibration as a failure mechanism',
+            'Vibration and dynamic strain',
+            'Vibration Risk Assessment methodologies',
+            'Energy Institute Guidelines (2008)',
+            'Small Bore Connections (SBCs) and instrument tubing',
+            'Anti-vibration clamps and supports',
+            'Examples of good and bad practice',
+          ].map((item) => (
+            <li class="flex items-start gap-2">
+              <svg class="w-4 h-4 text-bv-teal flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>
+              <span>{item}</span>
+            </li>
+          ))}
+        </ul>
+      </section>
+
+      <section class="bg-bv-navy/5 rounded-xl p-8">
+        <h2 class="text-xl font-bold text-bv-navy mb-4">Why Choose Bureau Veritas?</h2>
+        <p class="text-gray-600 leading-relaxed">
+          Our training courses are developed and delivered by experienced and current practitioners. Our trainers draw upon the collective experience of the team to provide real-world examples, with a mixture of classroom time and on-site experience.
+        </p>
+      </section>
+    </div>
+  </article>
+
+  <ContactSection />
+</Layout>

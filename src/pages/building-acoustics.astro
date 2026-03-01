@@ -1,0 +1,75 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Hero from '../components/Hero.astro';
+import ContactSection from '../components/ContactSection.astro';
+---
+
+<Layout
+  title="Building & Architectural Acoustics — Bureau Veritas AVOH"
+  description="Acoustic design advice, sound insulation testing, BREEAM HEA 05 and POL 05 assessments, ANC registered pre-completion testing for building regulations compliance."
+>
+  <Hero
+    title="Building & Architectural Acoustics"
+    subtitle="Advice and measurement for building projects requiring consideration of noise and vibration issues — from design through to completion testing."
+    image="buildings.jpg"
+    imageAlt="Building for acoustic design"
+  />
+
+  <article class="py-16">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section class="mb-12">
+        <p class="text-lg text-gray-700 leading-relaxed">
+          The acoustic performance of many buildings is critical to their overall success. Our team offers acoustic consultancy services to those involved in the design and management of buildings, covering education, health, leisure, commercial, residential and industrial building types.
+        </p>
+      </section>
+
+      <section class="mb-12">
+        <h2 class="text-2xl font-bold text-bv-navy mb-6">Our Services</h2>
+        <ul class="space-y-3">
+          {[
+            'External noise ingress assessment from environmental sources such as road/rail traffic or aircraft',
+            'Sound insulation between internal areas through walls, floors and doors',
+            'Control of impact sound (e.g. footfall on floors)',
+            'Internal acoustics and control of reverberation time',
+            'Rain noise assessment and mitigation',
+            'Vibration isolation',
+            'Plant noise assessment',
+            'Onsite inspection for workmanship and material selection',
+            'Pre-completion sound insulation testing (ANC registered)',
+            'Remedial guidance for existing building acoustic issues',
+            'Noise assessments for planning purposes',
+            'Voice evacuation alarm and PA system acoustic design verification',
+          ].map((item) => (
+            <li class="flex items-start gap-3">
+              <svg class="w-5 h-5 text-bv-teal flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>
+              <span class="text-gray-700">{item}</span>
+            </li>
+          ))}
+        </ul>
+      </section>
+
+      <section class="mb-12">
+        <h2 class="text-2xl font-bold text-bv-navy mb-6">Sound Insulation Testing</h2>
+        <div class="flex flex-col md:flex-row gap-8">
+          <div class="flex-1">
+            <p class="text-gray-600 leading-relaxed">
+              We are members of the Association of Noise Consultants (ANC) and are registered to undertake sound insulation testing under their Pre-Completion Testing Registration Scheme to assess compliance against Approved Document E to the Building Regulations.
+            </p>
+          </div>
+          <div class="md:w-72 flex-shrink-0">
+            <img src={`${import.meta.env.BASE_URL}images/sound-insulation.jpg`} alt="Sound insulation testing" class="rounded-lg shadow-md w-full" loading="lazy" />
+          </div>
+        </div>
+      </section>
+
+      <section class="bg-bv-navy/5 rounded-xl p-8">
+        <h2 class="text-xl font-bold text-bv-navy mb-4">Why Choose Bureau Veritas?</h2>
+        <p class="text-gray-600 leading-relaxed">
+          We pride ourselves on our customer focus and pragmatic approach. Our services are tailored to clients' needs with ad hoc solutions developed to meet their requirements, delivered with the impartiality that has made Bureau Veritas a world leader.
+        </p>
+      </section>
+    </div>
+  </article>
+
+  <ContactSection />
+</Layout>

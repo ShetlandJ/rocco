@@ -1,0 +1,96 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Hero from '../components/Hero.astro';
+import ContactSection from '../components/ContactSection.astro';
+
+const base = import.meta.env.BASE_URL;
+---
+
+<Layout
+  title="Occupational Noise Assessments — Bureau Veritas AVOH"
+  description="Workplace noise assessments, NEMS noise exposure management, noise control studies, PA/alarm systems, noise dosimetry and compliance with the Control of Noise at Work Regulations."
+>
+  <Hero
+    title="Occupational Noise"
+    subtitle="Our team of acousticians have extensive experience to help you manage all your occupational noise requirements, from risk assessments to noise management plans."
+    image="noise-at-work.jpg"
+    imageAlt="Noise at work assessment"
+  />
+
+  <article class="py-16">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section class="mb-12">
+        <p class="text-lg text-gray-700 leading-relaxed mb-6">
+          Prolonged exposure to high levels of noise can lead to stress, fatigue or even deafness. Employers have a duty of care to protect employees who may be at risk of exposure to noise at work under the Control of Noise at Work Regulations (CoNAWR).
+        </p>
+        <p class="text-gray-600 leading-relaxed">
+          Whether an industrial plant, an offshore installation or a shipping or fishing vessel, we can help manage noise and achieve compliance.
+        </p>
+      </section>
+
+      <section class="mb-12">
+        <h2 class="text-2xl font-bold text-bv-navy mb-6">Our Services</h2>
+        <ul class="space-y-3">
+          {[
+            'Assessment of employee exposure to noise',
+            'Provision of management plans, policies and procedures for regulatory compliance',
+            'Noise management audits',
+            'Workplace risk assessments and noise mapping',
+            'Noise design and control studies',
+            'Audiometry programme audits and assessments',
+            'Noise dosimetry studies',
+            'Noise awareness and Noise Competent Person (NCP) training',
+            'PA and alarm assessments, design and verification (SOLAS)',
+            'Expert witness services',
+          ].map((item) => (
+            <li class="flex items-start gap-3">
+              <svg class="w-5 h-5 text-bv-teal flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>
+              <span class="text-gray-700">{item}</span>
+            </li>
+          ))}
+        </ul>
+      </section>
+
+      <section class="mb-12">
+        <h2 class="text-2xl font-bold text-bv-navy mb-6">NEMS — Noise Exposure Management System</h2>
+        <p class="text-gray-600 leading-relaxed mb-4">
+          Developed and offered exclusively by Bureau Veritas, NEMS is a comprehensive management system used widely across the offshore industry to demonstrate compliance with the Control of Noise at Work Regulations.
+        </p>
+        <p class="text-gray-600 leading-relaxed mb-6">
+          The system calculates noise exposure levels for the workforce, identifies areas or tasks which contribute most to noise exposure, and provides risk indicators and recording facilities for ongoing compliance. It can also model the potential effectiveness of different noise control measures.
+        </p>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          {[
+            'Calculation of personnel noise exposure levels',
+            'Identification of high-risk areas and tasks',
+            'Targeted noise control studies',
+            'Assessment of hearing protection effectiveness',
+            'Key Performance Indicators for noise exposure risk',
+            'Embedded noise action plans',
+          ].map((benefit) => (
+            <div class="flex items-start gap-2">
+              <svg class="w-4 h-4 text-bv-accent flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" /></svg>
+              <span class="text-sm text-gray-700">{benefit}</span>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <section class="mb-12">
+        <h2 class="text-2xl font-bold text-bv-navy mb-6">PA and Alarm Systems</h2>
+        <p class="text-gray-600 leading-relaxed">
+          We perform tests on Public Address and Alarm systems including direct measurement of acoustic performance for audibility and intelligibility, comprising alarm sound level surveys and quantitative speech intelligibility tests. Suitable for offshore installations and vessels, carried out against industry compliance criteria or specific operator requirements.
+        </p>
+      </section>
+
+      <section class="bg-bv-navy/5 rounded-xl p-8">
+        <h2 class="text-xl font-bold text-bv-navy mb-4">Why Choose Bureau Veritas?</h2>
+        <p class="text-gray-600 leading-relaxed">
+          We pride ourselves on our customer focus and can provide cost-effective solutions to help you meet your regulatory requirements. Our services can be combined as part of a multi-disciplinary survey including occupational hygiene and occupational vibration.
+        </p>
+      </section>
+    </div>
+  </article>
+
+  <ContactSection />
+</Layout>

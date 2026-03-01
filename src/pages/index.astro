@@ -1,0 +1,138 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Hero from '../components/Hero.astro';
+import ServiceCard from '../components/ServiceCard.astro';
+import ContactSection from '../components/ContactSection.astro';
+
+const base = import.meta.env.BASE_URL;
+---
+
+<Layout
+  title="Bureau Veritas — Acoustics, Vibration & Occupational Hygiene"
+  description="Specialist noise, vibration and occupational hygiene consultancy services across the UK. Environmental noise assessments, pipework vibration, building acoustics and more."
+>
+  <Hero
+    title="Acoustics, Vibration & Occupational Hygiene"
+    subtitle="Specialist consultancy from one of the UK's largest independent teams. From noise impact assessments to pipework vibration analysis, we deliver trusted, impartial advice."
+    image="solar-renewables.jpg"
+    imageAlt="Renewable energy site for noise impact assessment"
+    cta={{ text: "Explore Our Services", href: `${base}#services` }}
+  />
+
+  <!-- Services Grid -->
+  <section id="services" class="py-16 sm:py-20 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12">
+        <h2 class="text-2xl sm:text-3xl font-bold text-bv-navy mb-4">Our Services</h2>
+        <p class="text-gray-600 max-w-2xl mx-auto">Comprehensive acoustics, vibration and occupational hygiene solutions for every sector — from planning applications to offshore installations.</p>
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <ServiceCard
+          title="Environmental Noise"
+          description="Noise impact assessments for planning applications, environmental monitoring and construction noise management."
+          href="environmental-noise"
+          image="noise-map-residential.jpg"
+          imageAlt="Environmental noise map"
+        />
+        <ServiceCard
+          title="Occupational Noise"
+          description="Workplace noise assessments, NEMS, noise control studies, PA/alarm systems and noise dosimetry."
+          href="occupational-noise"
+          image="noise-at-work.jpg"
+          imageAlt="Noise at work assessment"
+        />
+        <ServiceCard
+          title="Pipework Vibration"
+          description="Vibration risk assessments, PSI screening, dynamic strain measurements and FEA simulation."
+          href="pipework-vibration"
+          image="pipework.jpg"
+          imageAlt="Pipework vibration assessment"
+        />
+        <ServiceCard
+          title="AIV & FIV"
+          description="Acoustic Induced Vibration and Flow Induced Vibration screening studies to prevent fatigue failures."
+          href="aiv-fiv"
+          image="oil-gas.jpg"
+          imageAlt="Oil and gas facility"
+        />
+        <ServiceCard
+          title="Hand-Arm & Whole-Body Vibration"
+          description="HAV and WBV assessments, VEMS, compliance with the Control of Vibration at Work Regulations."
+          href="hand-arm-whole-body-vibration"
+          image="construction.jpg"
+          imageAlt="Construction site vibration assessment"
+        />
+        <ServiceCard
+          title="Building Acoustics"
+          description="Architectural acoustics design, sound insulation testing, ANC registered pre-completion testing."
+          href="building-acoustics"
+          image="buildings.jpg"
+          imageAlt="Building acoustic design"
+        />
+        <ServiceCard
+          title="Occupational Hygiene"
+          description="COSHH assessments, LEV testing, indoor air quality, EMF, radon and pharmaceutical OEL testing."
+          href="occupational-hygiene"
+          image="ppe.jpg"
+          imageAlt="Personal protective equipment"
+        />
+        <ServiceCard
+          title="Training"
+          description="Noise at Work competency, HAVS training, pipework vibration awareness and NEMS courses."
+          href="training"
+          image="noise-map-factory.jpg"
+          imageAlt="Noise mapping training"
+        />
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Choose BV -->
+  <section class="py-16 sm:py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12">
+        <h2 class="text-2xl sm:text-3xl font-bold text-bv-navy mb-4">Why Choose Bureau Veritas?</h2>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="text-center">
+          <div class="w-14 h-14 mx-auto mb-4 bg-bv-navy/5 rounded-full flex items-center justify-center">
+            <svg class="w-7 h-7 text-bv-navy" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" /></svg>
+          </div>
+          <h3 class="font-bold text-bv-navy mb-2">Independent & Impartial</h3>
+          <p class="text-sm text-gray-600">Part of a world-leading testing, inspection and certification group with a 200-year tradition of trust and impartiality.</p>
+        </div>
+        <div class="text-center">
+          <div class="w-14 h-14 mx-auto mb-4 bg-bv-navy/5 rounded-full flex items-center justify-center">
+            <svg class="w-7 h-7 text-bv-navy" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z" /></svg>
+          </div>
+          <h3 class="font-bold text-bv-navy mb-2">Specialist Team</h3>
+          <p class="text-sm text-gray-600">Our AVOH team comprises experienced engineers, acousticians and consultants — one of the largest independent teams of its type in the UK.</p>
+        </div>
+        <div class="text-center">
+          <div class="w-14 h-14 mx-auto mb-4 bg-bv-navy/5 rounded-full flex items-center justify-center">
+            <svg class="w-7 h-7 text-bv-navy" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+          </div>
+          <h3 class="font-bold text-bv-navy mb-2">UK-Wide Coverage</h3>
+          <p class="text-sm text-gray-600">With offices in Glasgow, Aberdeen, Manchester and London, we deliver services across the UK and internationally.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Offices -->
+  <section class="py-16 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-2xl sm:text-3xl font-bold text-bv-navy text-center mb-10">Our Offices</h2>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+        {['Glasgow', 'Aberdeen', 'Manchester', 'London'].map((city) => (
+          <div class="bg-white rounded-lg p-6 text-center shadow-sm border border-gray-100">
+            <svg class="w-6 h-6 text-bv-teal mx-auto mb-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" /><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" /></svg>
+            <p class="font-semibold text-bv-navy">{city}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <ContactSection />
+</Layout>

@@ -1,0 +1,82 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Hero from '../components/Hero.astro';
+import ContactSection from '../components/ContactSection.astro';
+
+const base = import.meta.env.BASE_URL;
+---
+
+<Layout
+  title="Hand-Arm & Whole-Body Vibration Assessments — Bureau Veritas AVOH"
+  description="HAV and WBV assessments, VEMS vibration exposure management, compliance with CoVAWR, HAVS risk assessments for onshore and offshore facilities."
+>
+  <Hero
+    title="Hand-Arm & Whole-Body Vibration"
+    subtitle="Vibration risk assessments, production of management plans and auditing to help you comply with the Control of Vibration at Work Regulations."
+    image="construction.jpg"
+    imageAlt="Construction site vibration"
+  />
+
+  <article class="py-16">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section class="mb-12">
+        <h2 class="text-2xl font-bold text-bv-navy mb-6">Control of Vibration at Work Regulations 2005</h2>
+        <p class="text-gray-600 leading-relaxed mb-4">
+          Hand-Arm Vibration Syndrome (HAVS) is the most commonly reported disease under RIDDOR. Over-exposure of hands to high levels of vibration can lead to permanent disability of equipment operators.
+        </p>
+        <p class="text-gray-600 leading-relaxed">
+          The Control of Vibration at Work Regulations (CoVAWR) place a duty on employers to assess and manage vibration risks from vibrating tools and equipment, extending to whole-body vibration experienced when seated or standing in high-vibration areas. Whether an industrial plant, offshore installation or vessel, we can help manage occupational vibration and achieve compliance.
+        </p>
+      </section>
+
+      <section class="mb-12">
+        <h2 class="text-2xl font-bold text-bv-navy mb-6">Our Services</h2>
+        <ul class="space-y-3">
+          {[
+            'Assessment of employee exposure to Hand-Arm Vibration (HAV) and Whole-Body Vibration (WBV)',
+            'Compilation of hand-held equipment datasheets and associated time to achieve regulatory exposure action values',
+            'Provision of vibration management plans for regulatory compliance',
+            'Workplace risk assessments',
+            'Identification of tools or processes likely to induce HAVS',
+            'Measures to reduce occupational vibration',
+            'Training of local operators in assessing vibration',
+          ].map((item) => (
+            <li class="flex items-start gap-3">
+              <svg class="w-5 h-5 text-bv-teal flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>
+              <span class="text-gray-700">{item}</span>
+            </li>
+          ))}
+        </ul>
+      </section>
+
+      <section class="mb-12">
+        <h2 class="text-2xl font-bold text-bv-navy mb-6">VEMS — Vibration Exposure Management System</h2>
+        <p class="text-gray-600 leading-relaxed mb-4">
+          Bureau Veritas developed VEMS (Vibration Exposure Management System) to simplify the assessment process. It provides a user-friendly management system allowing employers to monitor personnel exposure over time and avoid exposure in excess of regulatory action values.
+        </p>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          {[
+            'Calculation of personnel vibration exposure levels',
+            'Monitoring of exposure over time',
+            'Recording facilities for ongoing compliance',
+            'Key Performance Indicators for vibration risk',
+          ].map((benefit) => (
+            <div class="flex items-start gap-2">
+              <svg class="w-4 h-4 text-bv-accent flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" /></svg>
+              <span class="text-sm text-gray-700">{benefit}</span>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <section class="bg-bv-navy/5 rounded-xl p-8">
+        <h2 class="text-xl font-bold text-bv-navy mb-4">Why Choose Bureau Veritas?</h2>
+        <p class="text-gray-600 leading-relaxed">
+          We provide cost-effective solutions to help you meet your regulatory requirements. These services can be combined as part of a multi-disciplinary survey including occupational noise and occupational hygiene assessments.
+        </p>
+      </section>
+    </div>
+  </article>
+
+  <ContactSection />
+</Layout>

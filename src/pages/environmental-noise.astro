@@ -1,0 +1,73 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Hero from '../components/Hero.astro';
+import ContactSection from '../components/ContactSection.astro';
+
+const base = import.meta.env.BASE_URL;
+---
+
+<Layout
+  title="Environmental Noise Assessments — Bureau Veritas AVOH"
+  description="Noise impact assessments for planning applications, environmental noise monitoring, construction noise and vibration, BS4142 assessments and 3D noise modelling."
+>
+  <Hero
+    title="Environmental Noise"
+    subtitle="Noise impact assessments to support planning and permit applications for new developments, covering everything from industrial sites to renewable energy projects."
+    image="solar-renewables.jpg"
+    imageAlt="Renewable energy site noise impact assessment"
+  />
+
+  <article class="py-16">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section class="mb-12">
+        <p class="text-lg text-gray-700 leading-relaxed mb-6">
+          Almost all industrial operations have the potential to generate noise and vibration which can cause nuisance at nearby receptors. Regulatory authorities normally require noise and vibration assessments as part of planning or licence applications for new industrial developments.
+        </p>
+        <p class="text-gray-600 leading-relaxed">
+          The National Planning Policy Framework (NPPF) requires noise assessments for planning or licence permit applications for developments which may produce noise or vibration affecting residential or noise-sensitive areas. The effects of existing noise on proposed sensitive developments also need to be assessed early to allow sustainable controls to be incorporated in their design.
+        </p>
+      </section>
+
+      <section class="mb-12">
+        <h2 class="text-2xl font-bold text-bv-navy mb-6">Our Services</h2>
+        <ul class="space-y-3">
+          {[
+            'Ambient noise and vibration monitoring to BS, EN and ISO standards',
+            'Noise and vibration assessment for planning or licence permit applications (BS4142)',
+            'Development of noise management plans and environmental noise management systems',
+            'Prediction of noise propagation and impacts using 3D modelling software',
+            'Engineering design advice to ensure compliance with appropriate limits',
+            'Prediction and monitoring of construction noise and vibration',
+            'Prediction and measurement of road, rail and aircraft noise',
+            'Acoustic design advice and specification, including facade and room-space analysis',
+            'Construction Management Plans and COPA Section 61 Agreements',
+            'Full technical support through the EIA process, including Expert Witness at Public Inquiries',
+            'Policy advice and support to government and regulatory bodies',
+            'Liaison and negotiation with regulatory authorities regarding noise limits and conditions',
+          ].map((item) => (
+            <li class="flex items-start gap-3">
+              <svg class="w-5 h-5 text-bv-teal flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>
+              <span class="text-gray-700">{item}</span>
+            </li>
+          ))}
+        </ul>
+      </section>
+
+      <section class="mb-12">
+        <h2 class="text-2xl font-bold text-bv-navy mb-6">Sectors We Serve</h2>
+        <p class="text-gray-600 leading-relaxed">
+          Our environmental noise services cover a wide range of sectors including land and property, manufacturing, power generation and transmission, demolition and construction, transport and infrastructure (rail, road, aviation and marine), water and gas distribution, waste, mining and quarrying, and the renewable energy sector.
+        </p>
+      </section>
+
+      <section class="bg-bv-navy/5 rounded-xl p-8">
+        <h2 class="text-xl font-bold text-bv-navy mb-4">Why Choose Bureau Veritas?</h2>
+        <p class="text-gray-600 leading-relaxed">
+          Our service range covers the impacts of noise and vibration in the environment, on people as well as on structures and machinery. We support clients from private land developers and planning consultancies to major blue-chip organisations, the aviation industry, offshore operators and government departments.
+        </p>
+      </section>
+    </div>
+  </article>
+
+  <ContactSection />
+</Layout>
