@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://shetlandj.github.io/rocco/sitemap-index.xml

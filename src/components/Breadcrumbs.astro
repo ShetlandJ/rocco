@@ -1,0 +1,16 @@
+---
+interface Props {
+  current: string;
+}
+
+const { current } = Astro.props;
+const base = import.meta.env.BASE_URL;
+---
+
+<nav aria-label="Breadcrumb" class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+  <ol class="flex items-center gap-2 text-sm text-gray-500">
+    <li><a href={`${base}`} class="hover:text-bv-navy focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-bv-navy transition-colors">Home</a></li>
+    <li aria-hidden="true"><svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg></li>
+    <li aria-current="page" class="text-bv-navy font-medium">{current}</li>
+  </ol>
+</nav>

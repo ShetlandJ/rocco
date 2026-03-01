@@ -2,6 +2,7 @@
 import Layout from '../layouts/Layout.astro';
 import Hero from '../components/Hero.astro';
 import ContactSection from '../components/ContactSection.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
 ---
 
 <Layout
@@ -14,6 +15,8 @@ import ContactSection from '../components/ContactSection.astro';
     image="pipework.jpg"
     imageAlt="Pipework for vibration assessment"
   />
+
+  <Breadcrumbs current="Pipework Vibration" />
 
   <article class="py-16">
     <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
