@@ -38,7 +38,7 @@ const base = import.meta.env.BASE_URL;
           title="Occupational Noise"
           description="Workplace noise assessments, NEMS, noise control studies, PA/alarm systems and noise dosimetry."
           href="occupational-noise"
-          image="noise-at-work.jpg"
+          image="noise-at-work-new.jpg"
           imageAlt="Noise at work assessment"
         />
         <ServiceCard
@@ -59,8 +59,8 @@ const base = import.meta.env.BASE_URL;
           title="Hand-Arm & Whole-Body Vibration"
           description="HAV and WBV assessments, VEMS, compliance with the Control of Vibration at Work Regulations."
           href="hand-arm-whole-body-vibration"
-          image="construction.jpg"
-          imageAlt="Construction site vibration assessment"
+          image="noise-at-work.jpg"
+          imageAlt="Worker using angle grinder"
         />
         <ServiceCard
           title="Building Acoustics"
@@ -80,8 +80,8 @@ const base = import.meta.env.BASE_URL;
           title="Training"
           description="Noise at Work competency, HAVS training, pipework vibration awareness and NEMS courses."
           href="training"
-          image="noise-map-factory.jpg"
-          imageAlt="Noise mapping training"
+          image="training.jpg"
+          imageAlt="Training session"
         />
       </div>
     </div>
@@ -113,23 +113,62 @@ const base = import.meta.env.BASE_URL;
             <svg class="w-7 h-7 text-bv-navy" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
           </div>
           <h3 class="font-bold text-bv-navy mb-2">UK-Wide Coverage</h3>
-          <p class="text-sm text-gray-600">With offices in Glasgow, Aberdeen, Manchester and London, we deliver services across the UK and internationally.</p>
+          <p class="text-sm text-gray-600">With offices in Glasgow, Aberdeen, Manchester and London, plus consultants across the UK, we deliver services nationally and internationally.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Offices -->
+  <!-- Geographic Spread -->
   <section class="py-16 bg-gray-50">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <h2 class="text-2xl sm:text-3xl font-bold text-bv-navy text-center mb-10">Our Offices</h2>
-      <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
-        {['Glasgow', 'Aberdeen', 'Manchester', 'London'].map((city) => (
-          <div class="bg-white rounded-lg p-6 text-center shadow-sm border border-gray-100">
-            <svg class="w-6 h-6 text-bv-teal mx-auto mb-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" /><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" /></svg>
-            <p class="font-semibold text-bv-navy">{city}</p>
+      <h2 class="text-2xl sm:text-3xl font-bold text-bv-navy text-center mb-3">UK-Wide Coverage</h2>
+      <p class="text-gray-600 text-center mb-10 max-w-2xl mx-auto">Our consultants are based across the UK, delivering local expertise with national reach.</p>
+
+      <h3 class="text-lg font-semibold text-bv-navy mb-4">Our Offices</h3>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
+        {[
+          { city: 'Glasgow', url: 'https://share.google/NK4iuTgNJ33LAEpI7' },
+          { city: 'Aberdeen', url: 'https://share.google/IoloClrnuO6GaNAly' },
+          { city: 'Manchester', url: 'https://share.google/CWUT0qPBah9tWfgJf' },
+          { city: 'London', url: 'https://share.google/kt2I5vJoCrv9nIyng' },
+        ].map((office) => (
+          <a href={office.url} target="_blank" rel="noopener noreferrer" class="bg-white rounded-lg p-5 text-center shadow-sm border border-gray-100 hover:shadow-md hover:border-bv-teal/30 transition-all">
+            <svg class="w-6 h-6 text-bv-teal mx-auto mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" /><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" /></svg>
+            <p class="font-semibold text-bv-navy">{office.city}</p>
+          </a>
+        ))}
+      </div>
+
+      <h3 class="text-lg font-semibold text-bv-navy mb-4">Additional Consultant Locations</h3>
+      <div class="grid grid-cols-3 md:grid-cols-3 gap-4">
+        {['Newcastle', 'Derby', 'Southampton'].map((city) => (
+          <div class="bg-white rounded-lg p-4 text-center shadow-sm border border-gray-100">
+            <svg class="w-5 h-5 text-bv-accent mx-auto mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" /><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" /></svg>
+            <p class="font-medium text-bv-navy text-sm">{city}</p>
           </div>
         ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Professional Accreditations -->
+  <section class="py-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-xl sm:text-2xl font-bold text-bv-navy text-center mb-8">Professional Accreditations</h2>
+      <div class="flex flex-wrap items-center justify-center gap-8 sm:gap-12">
+        <a href="https://www.association-of-noise-consultants.co.uk" target="_blank" rel="noopener noreferrer" class="hover:opacity-80 transition-opacity">
+          <img src={`${base}images/anc-logo.png`} alt="Association of Noise Consultants" class="h-16 sm:h-20 w-auto" />
+        </a>
+        <a href="https://www.ioa.org.uk" target="_blank" rel="noopener noreferrer" class="hover:opacity-80 transition-opacity">
+          <img src={`${base}images/ioa-logo.jpg`} alt="Institute of Acoustics" class="h-16 sm:h-20 w-auto" />
+        </a>
+        <a href="https://www.imeche.org/" target="_blank" rel="noopener noreferrer" class="hover:opacity-80 transition-opacity">
+          <img src={`${base}images/imeche-logo.png`} alt="Institution of Mechanical Engineers" class="h-16 sm:h-20 w-auto" />
+        </a>
+        <a href="https://www.bohs.org" target="_blank" rel="noopener noreferrer" class="hover:opacity-80 transition-opacity">
+          <img src={`${base}images/bohs-logo.png`} alt="British Occupational Hygiene Society" class="h-16 sm:h-20 w-auto" />
+        </a>
       </div>
     </div>
   </section>

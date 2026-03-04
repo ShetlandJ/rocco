@@ -83,8 +83,9 @@ const isServicePage = services.some(s => isActive(s.href));
     <header class="bg-bv-navy text-white sticky top-0 z-50">
       <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" aria-label="Main navigation">
         <div class="flex items-center justify-between h-16">
-          <a href={`${base}`} class="text-lg font-bold tracking-tight hover:text-bv-teal focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-bv-teal transition-colors">
-            Bureau Veritas <span class="hidden sm:inline">— AVOH</span>
+          <a href={`${base}`} class="flex items-center gap-3 hover:opacity-90 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-bv-teal transition-opacity">
+            <img src={`${base}images/bv-logo-white.png`} alt="Bureau Veritas logo" class="h-10 w-auto" />
+            <span class="text-lg font-bold tracking-tight hidden sm:inline">AVOH</span>
           </a>
           <button
             id="mobile-menu-btn"
@@ -177,10 +178,10 @@ const isServicePage = services.some(s => isActive(s.href));
             <div>
               <h3 class="text-lg font-bold mb-4">UK Offices</h3>
               <ul class="space-y-2 text-sm text-white/80">
-                <li>Glasgow</li>
-                <li>Aberdeen</li>
-                <li>Manchester</li>
-                <li>London</li>
+                <li><a href="https://share.google/NK4iuTgNJ33LAEpI7" target="_blank" rel="noopener noreferrer" class="hover:text-bv-teal transition-colors">Glasgow</a></li>
+                <li><a href="https://share.google/IoloClrnuO6GaNAly" target="_blank" rel="noopener noreferrer" class="hover:text-bv-teal transition-colors">Aberdeen</a></li>
+                <li><a href="https://share.google/CWUT0qPBah9tWfgJf" target="_blank" rel="noopener noreferrer" class="hover:text-bv-teal transition-colors">Manchester</a></li>
+                <li><a href="https://share.google/kt2I5vJoCrv9nIyng" target="_blank" rel="noopener noreferrer" class="hover:text-bv-teal transition-colors">London</a></li>
               </ul>
               <div class="mt-4">
                 <a href={`${base}contact`} class="text-bv-teal hover:text-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-bv-teal transition-colors text-sm font-semibold">Get in touch &rarr;</a>
