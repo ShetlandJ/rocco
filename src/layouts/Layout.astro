@@ -82,10 +82,10 @@ const isServicePage = services.some(s => isActive(s.href));
     </a>
     <header class="bg-bv-navy text-white sticky top-0 z-50">
       <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" aria-label="Main navigation">
-        <div class="flex items-center justify-between h-20">
+        <div class="flex items-center justify-between h-20 sm:h-24">
           <a href={`${base}`} class="flex items-center gap-3 hover:opacity-90 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-bv-teal transition-opacity">
-            <img src={`${base}images/bv-logo-white.png`} alt="Bureau Veritas logo" class="h-14 sm:h-16 w-auto" />
-            <span class="text-lg font-bold tracking-tight hidden sm:inline">AVOH</span>
+            <img src={`${base}images/bv-logo-white.png`} alt="Bureau Veritas logo" class="h-14 sm:h-20 w-auto" />
+            <span class="text-xl font-bold tracking-tight hidden sm:inline">AVOH</span>
           </a>
           <button
             id="mobile-menu-btn"
